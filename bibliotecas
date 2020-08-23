@@ -1,0 +1,12 @@
+npm install redux react-redux - um é o proprio redux, o outro é o react com redux
+npm install immer - ajuda a trabalhar com a imutabilidade do state do reducer
+
+
+//passando o state, a acrion string e adicionado o amount('quantidade) em cada array
+    return [...state, {
+        ...action.trip,
+        amount:1,
+    }];
+
+
+npm install redux-saga
