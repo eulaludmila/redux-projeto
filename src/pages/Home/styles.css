@@ -1,8 +1,29 @@
-.box{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    list-style: none;
+@media (min-width:900px){
+    .box{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        list-style: none;
+    }
+}
+
+
+@media (min-width:600px) AND (max-width:900px){
+    .box{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        list-style: none;
+    }
+}
+
+@media (max-width:600px){
+    .box{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+        list-style: none;
+    }
 }
 
 .box li{
@@ -14,7 +35,8 @@
 }
 
 .box img{
-    max-width: 280px;
+    width: 100%;
+    /* max-width: 280px; */
     max-height: 220px;
     border-radius: 4px;
 }

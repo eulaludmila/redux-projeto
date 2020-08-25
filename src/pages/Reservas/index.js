@@ -4,7 +4,7 @@ import './styles.css';
 import { MdAddCircle, MdRemoveCircle, MdDelete } from 'react-icons/md';
 import { removeReserve, updateAmountRequest } from '../../store/modules/reserve/actions';
 
-export default function Reservas() {
+export default function Reservas({history}) {
     const reserves = useSelector(state => state.reserve);
     const dispatch = useDispatch();
     const [loading, setLoading] = useState(true);
@@ -46,7 +46,7 @@ export default function Reservas() {
                                 <MdAddCircle size={25} />
                             </button>
                         </div>
-                        <button type="button" onClick={() => handleRemove(reserve.id)}>
+                        <button className="lixo" type="button" onClick={() => handleRemove(reserve.id)}>
                             <MdDelete size={20} color="#191919" />
                         </button>
                     </div>
@@ -56,7 +56,7 @@ export default function Reservas() {
 
 
             <footer>
-                <button type="button">Solicitar Reservas</button>
+                <button type="button" onClick={() => {history.push('/')}}>Solicitar Reservas</button>
             </footer>
         </div>
     )
